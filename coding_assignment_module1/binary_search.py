@@ -1,6 +1,6 @@
 def BinarySearch(arr,key,b,e):
-	if e>=1:
-		mid=int((b+(e-1))/2)
+	while e>=1:
+		mid=int((b+e)/2)
 		if arr[mid]==key:
 			return mid
 		elif (arr[mid]<key):
@@ -16,6 +16,6 @@ while len(a)<n:
 	num=int(input('Enter the number: '))
 	a.append(num)
 x=int(input('Enter the element whose position you want to search: '))
-ans=BinarySearch(a,x,0,len(a))
+ans=BinarySearch(a,x,0,len(a)-1)
 print(ans)
 	
